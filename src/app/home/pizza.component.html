@@ -1,0 +1,58 @@
+<section class="default">
+  <div class="section-header">
+    <h1 class="section-title default">
+      Pizza
+    </h1>
+    <h2 class="section-description default">
+      Głodny? Tworzymy pizze z sercem!
+    </h2>
+  </div>
+
+  <div class="section-pizza-list">
+    <mat-accordion class="pizza-list">
+      <mat-expansion-panel *ngFor="let pizza of pizzaList" class="pizza-panel card-default">
+        <mat-expansion-panel-header class="panel-header">
+          <mat-panel-title class="panel-header-title default-font-title">
+            <div>{{ pizza.name }}</div>
+          </mat-panel-title>
+          <mat-panel-description class="panel-header-description">
+            <div class="pizza-elements-list">
+              <div class="pizza-element"
+                   *ngFor="let pizzaElem of keys(pizzaElement)"
+                   [ngClass]="pizza.elements.includes(pizzaElement[pizzaElem]) ? 'active' : 'hidden'"
+                   matTooltip="{{pizzaElement[pizzaElem]}}"
+                   matTooltipPosition="above"
+              >
+                <div class="pizza-icon" [ngClass]="pizzaElem"></div>
+              </div>
+            </div>
+            <div class="pizza-price">
+              {{pizza.price30cm}} / {{pizza.price40cm}}
+            </div>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="panel-body">
+          <div class="pizza-description">
+            <p>
+              <span class="bold">Składniki:</span><br/>
+              <span class="lower-case">
+              <span
+                *ngFor="let pizzaElem of keys(pizzaElement); let first = first">{{pizza.elements.includes(pizzaElement[pizzaElem]) ? (first ? '' : ', ') + pizzaElement[pizzaElem] : ''}}</span>
+            </span>
+            </p>
+            <p>
+              <span class="bold">Cena:</span><br/>
+              Średnica 30 cm w cenie {{pizza.price30cm}}
+              <br/>
+              Średnica 40 cm w cenie {{pizza.price40cm}}
+            </p>
+          </div>
+          <div class="pizza-image">
+            <div class="pizza-image-shadow"><img [src]="'assets/images/pizza/pizza-'+pizza.name.toLowerCase().replace(' ', '_')+'.png'" alt=""/></div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+</section>

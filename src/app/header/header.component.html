@@ -1,0 +1,44 @@
+<header [ngClass]="
+    rlaPromocje.isActive ? 'promocje' :
+    rlaPizza.isActive ? 'pizza' :
+    rlaNapoje.isActive ? 'napoje' :
+    rlaKontakt.isActive ? 'kontakt' : 'promocje'"
+>
+  <div class="header-container">
+    <div class="container-logo">
+      Pizzeria Diva
+    </div>
+    <div class="container-item">
+      <p class="title">Zadzwoń i zamów {{
+        rlaPromocje.isActive ? 'pyszną Pizze i Burgera' :
+          rlaPizza.isActive ? 'pyszną Pizze' :
+              rlaNapoje.isActive ? 'pyszne danie z napojami' :
+                rlaKontakt.isActive ? 'swoje ulubione danie' : 'pyszną Pizze i Burgera'
+        }}!</p>
+      <p class="phone">tel. +48 501 502 503</p>
+      <br/>
+      <p class="title">lub odwiedź naszą restauracje</p>
+      <p class="address">40-110 Katowice</p>
+      <p class="address">ul. Agnieszki 25</p>
+      <p class="open">Zapraszamy codziennie od 9:00 do 23:00!</p>
+    </div>
+  </div>
+
+  <nav>
+    <button class="nav-button" mat-flat-button routerLink="/promocje" routerLinkActive="router-link-active"
+            #rlaPromocje="routerLinkActive">Promocje
+    </button>
+    <button class="nav-button" mat-flat-button routerLink="/pizza" routerLinkActive="router-link-active"
+            #rlaPizza="routerLinkActive">Pizza
+    </button>
+<!--    <button class="nav-button" mat-flat-button routerLink="/burgery" routerLinkActive="router-link-active"-->
+<!--            #rlaBurgery="routerLinkActive">Burgery-->
+<!--    </button>-->
+    <button class="nav-button" mat-flat-button routerLink="/napoje" routerLinkActive="router-link-active"
+            #rlaNapoje="routerLinkActive">Napoje
+    </button>
+    <button class="nav-button" mat-flat-button routerLink="/kontakt" routerLinkActive="router-link-active"
+            #rlaKontakt="routerLinkActive">Kontakt
+    </button>
+  </nav>
+</header>

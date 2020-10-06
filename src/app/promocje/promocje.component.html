@@ -1,0 +1,35 @@
+<section class="default">
+  <div class="section-header">
+    <h1 class="section-title default">
+      Promocje
+    </h1>
+    <h2 class="section-description default">
+      Zaoszczędź z naszymi promocjami!
+    </h2>
+  </div>
+
+  <div class="section-body">
+
+    <mat-card class="promo-card card-default" *ngFor="let promo of promoList">
+      <mat-card-header>
+        <!--        <div mat-card-avatar class="example-header-image"></div>-->
+        <mat-card-title class="promo-title default-font-title">{{promo.title}}</mat-card-title>
+        <mat-card-subtitle class="promo-subtitle">{{promo.subtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="promo-image">
+        <div class="promo-image-shadow"><img mat-card-image src="assets/images/promocje/{{promo.file.toLowerCase()}}" alt=""></div>
+      </div>
+      <mat-card-content class="promo-content">
+        <div>
+          {{promo.price}}
+        </div>
+      </mat-card-content>
+      <!--      <mat-card-actions>-->
+      <!--        <button mat-button>LIKE</button>-->
+      <!--        <button mat-button>SHARE</button>-->
+      <!--      </mat-card-actions>-->
+    </mat-card>
+
+  </div>
+</section>
+

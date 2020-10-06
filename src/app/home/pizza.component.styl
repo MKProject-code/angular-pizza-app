@@ -1,0 +1,226 @@
+
+::ng-deep .mat-tooltip-panel
+  margin-bottom -13px
+
+::ng-deep .mat-tooltip
+  font-size 20px
+  background-color #9a8581
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+
+section
+
+  //.section-header
+  //
+  //  .section-title
+  //
+  //  .section-description
+
+  .section-pizza-list
+    margin-top 30px
+
+    .pizza-list
+      .pizza-panel
+
+        //background-color rgba(255, 230, 230, 0.5)
+        //background-color rgba(200, 200, 200, 0.1)
+        //
+        ////box-shadow inset 0 0 40px 0 rgba(120, 100, 100, 0.5)
+        ////box-shadow inset 0 0 40px 0 rgba(100, 80, 80, 0.5)
+        //box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+        //border-radius 15px
+        //margin 10px
+
+        .panel-header
+
+          padding-top 15px
+          padding-bottom 15px
+
+          &.mat-expansion-panel-header.mat-expanded:hover
+          &.mat-expansion-panel-header.mat-expanded:focus
+            background rgba(0, 0, 0, 0.04)
+
+          .panel-header-title
+            min-width 120px
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            flex-grow: 0;
+
+            div
+              text-align center
+              width 125px
+
+          .panel-header-description
+            margin-right 190px
+            //display flex
+            flex-direction row
+            min-width 0
+
+            .pizza-price
+              color #fff
+              min-width 200px
+              position absolute
+              top 50%
+              transform translateY(-50%)
+              right 0
+              font-size 18px
+
+            //@media only screen and (max-width: 600px)
+            //  .pizza-elements-list
+            //    display none !important
+
+            .pizza-elements-list
+              @media only screen and (max-width: 865px)
+                display none !important
+              display flex
+              //flex-direction row
+              overflow hidden
+              min-width: 0;
+
+              .pizza-element
+                border-radius 30px
+
+                //padding 3px
+                margin: 5px
+
+                &.hidden
+                  display none
+
+                &.active
+                  //background-color #a9d560 //green background
+                  //box-shadow: inset 0 0 5px 5px rgba(255,255,255,1);
+
+                  .pizza-icon
+                    background-position 0 -45px !important
+                    background-size 45px auto !important
+
+                &:hover
+                  background-color rgba(226, 226, 226, 0.5) //green background
+                  //box-shadow: 0 0 5px 5px rgba(255,255,255,1);
+                  box-shadow: 0 0 8px 0 #e2e2e2;
+
+                .pizza-icon
+                  width 45px
+                  height 45px
+
+                  &.ananas
+                    background url("../../assets/icons/pizza/ananas.png") no-repeat
+
+                  &.boczek
+                    background url("../../assets/icons/pizza/boczek.png") no-repeat
+
+                  &.bazylia
+                    background url("../../assets/icons/pizza/bazylia.png") no-repeat
+
+                  &.brokuly
+                    background url("../../assets/icons/pizza/brokuly.png") no-repeat
+
+                  &.cebula
+                    background url("../../assets/icons/pizza/cebula.png") no-repeat
+
+                  &.chili
+                    background url("../../assets/icons/pizza/chili.png") no-repeat
+
+                  &.czosnkowy
+                    background url("../../assets/icons/pizza/czosnkowy.png") no-repeat
+
+                  &.diabolo
+                    background url("../../assets/icons/pizza/diabolo.png") no-repeat
+
+                  &.fasolka_cz
+                    background url("../../assets/icons/pizza/fasolka_cz.png") no-repeat
+
+                  &.fasolka_sz
+                    background url("../../assets/icons/pizza/fasolka_sz.png") no-repeat
+
+                  &.feta
+                    background url("../../assets/icons/pizza/feta.png") no-repeat
+
+                  &.kukurydza
+                    background url("../../assets/icons/pizza/kukurydza.png") no-repeat
+
+                  &.kurczak
+                    background url("../../assets/icons/pizza/kurczak.png") no-repeat
+
+                  &.majonezowo_jogurtowy
+                    background url("../../assets/icons/pizza/majonezowo_jogurtowy.png") no-repeat
+
+                  &.mozzarella
+                    background url("../../assets/icons/pizza/mozzarella.png") no-repeat
+
+                  &.oliwki_cz
+                    background url("../../assets/icons/pizza/oliwki_cz.png") no-repeat
+
+                  &.papryka
+                    background url("../../assets/icons/pizza/papryka.png") no-repeat
+
+                  &.parmezan
+                    background url("../../assets/icons/pizza/parmezan.png") no-repeat
+
+                  &.pieczarki
+                    background url("../../assets/icons/pizza/pieczarki.png") no-repeat
+
+                  &.pomidor
+                    background url("../../assets/icons/pizza/pomidor.png") no-repeat
+
+                  &.pomidorowy
+                    background url("../../assets/icons/pizza/pomidorowy.png") no-repeat
+
+                  &.rucola
+                    background url("../../assets/icons/pizza/rucola.png") no-repeat
+
+                  &.salami
+                    background url("../../assets/icons/pizza/salami.png") no-repeat
+
+                  &.szczypiorek
+                    background url("../../assets/icons/pizza/szczypiorek.png") no-repeat
+
+                  &.szynka
+                    background url("../../assets/icons/pizza/szynka.png") no-repeat
+
+                  &.szynka_parmenska
+                    background url("../../assets/icons/pizza/szynka_parmenska.png") no-repeat
+
+
+        .panel-body
+          display flex
+          justify-content space-between
+          @media only screen and (max-width: 865px)
+            flex-wrap wrap
+
+
+          .pizza-description
+            color #fff
+            padding-top 20px
+            font-size 20px
+            line-height 25px
+            min-width 440px
+            padding-right 10px
+            @media only screen and (max-width: 620px)
+              min-width 240px
+
+          .pizza-image
+            .pizza-image-shadow
+              position: relative;
+              max-width: 100%;
+              float: left;
+            .pizza-image-shadow::before
+              border-radius 10px
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+
+            img
+              border-radius 10px
+              width 300px
+              height 100%
+              float: left;
+              //box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,1.0);
+              box-shadow: 0 0 8px rgba(255,255,255,0.1);
+              //height 250px
+
+//height 100px

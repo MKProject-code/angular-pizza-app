@@ -1,0 +1,38 @@
+<section class="default">
+  <div class="section-header">
+    <h1 class="section-title default">
+      Napoje
+    </h1>
+    <h2 class="section-description default">
+      Spragniony? Dobrze trafiłeś!
+    </h2>
+  </div>
+
+  <div class="section-body">
+
+    <mat-card class="drink-card card-default" *ngFor="let drink of drinkList">
+      <mat-card-header>
+<!--        <div mat-card-avatar class="example-header-image"></div>-->
+        <mat-card-title class="drink-title default-font-title">{{drink.title}}</mat-card-title>
+        <mat-card-subtitle class="drink-subtitle">{{drink.subtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="drink-image">
+        <img mat-card-image src="assets/images/napoje/{{drink.file.toLowerCase()}}" alt="">
+      </div>
+      <mat-card-content class="drink-content">
+        <div>
+          {{drink.amount}}
+        </div>
+        <div>
+          {{drink.price}}
+        </div>
+      </mat-card-content>
+<!--      <mat-card-actions>-->
+<!--        <button mat-button>LIKE</button>-->
+<!--        <button mat-button>SHARE</button>-->
+<!--      </mat-card-actions>-->
+    </mat-card>
+
+  </div>
+</section>
+

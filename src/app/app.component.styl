@@ -1,0 +1,62 @@
+:host
+  display flex
+  justify-content center
+
+.background
+  background url("../assets/wood-texture2.jpg") no-repeat
+  background-size 100%
+  //background-size auto
+  background-position top
+  //background-size: cover;
+  //max-height 500px
+  width 100%
+  min-height: 100vh;
+  display flex
+  justify-content center
+  //height 100%
+  //position absolute
+  //z-index -100
+  //-webkit-box-shadow: inset 0px -77px 150px -50px rgba(105,67,52,1);
+  //-moz-box-shadow: inset 0px -77px 150px -50px rgba(105,67,52,1);
+  //box-shadow: inset 0px -300px 300px -50px rgba(105, 67, 52, 1);
+  //background-color red
+
+  @media only screen and (max-width: 2000px)
+    background-size 110%
+  @media only screen and (max-width: 1500px)
+    background-size 120%
+  @media only screen and (max-width: 1000px)
+    background-size 150%
+  @media only screen and (max-width: 830px)
+    background-size 180%
+  @media only screen and (max-width: 760px)
+    background-size 230%
+  @media only screen and (max-width: 700px)
+    background-size 280%
+  @media only screen and (max-width: 540px)
+    background-size 300%
+    min-width 420px
+
+  .content
+    width 1500px
+    height 100%
+    max-height 100%
+    position relative
+
+    .content-headbody
+      color #ecd6c9
+      min-height 100%
+      width 100%
+      box-shadow: 0 0 50px 0 #0f0f0f
+      background-color rgba(0, 0, 0, 0.5)
+
+    .space-footer
+      height 50px
+
+    .content-footer
+      clear: both;
+      position: relative;
+      height: 50px;
+      margin-top: -50px;
+      background-color red
+
