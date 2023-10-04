@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Working time: ~25h
 
 ## Demo
-http://skyidea.pl/demo/angular/1020PizzaApp/
+http://...pl/demo/angular/1020PizzaApp/
 
 ## Development server
 
